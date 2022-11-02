@@ -37,6 +37,7 @@ smtp_tls_security_level=may
 smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
 
 smtpd_relay_restrictions = permit_mynetworks permit_sasl_authenticated defer_unauth_destination
+smtpd_peername_lookup = no
 alias_maps = hash:/etc/aliases
 alias_database = hash:/etc/aliases
 mydestination = 'localhost', $myhostname, localhost.localdomain, localhost
